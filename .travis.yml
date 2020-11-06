@@ -28,6 +28,8 @@ before_install:
   - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
 
 install:
+  - sudo apt-get update -y
+  - sudo apt-get install -y cabal-install
   - cabal --version
   - ghc --version
   - travis_retry cabal update
