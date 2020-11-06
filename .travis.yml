@@ -32,7 +32,7 @@ install:
   - sudo apt-get install -y cabal-install
   - cabal --version
   - ghc --version
-  - travis_retry cabal update
+  - cabal update
 
 script:
   - cabal new-build --enable-tests --enable-benchmarks --flags=dev
